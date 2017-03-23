@@ -76,8 +76,9 @@ def getHref(hdoc):
 def urlfilter(url):
 	rt=False
 	if url.endswith(".aspx"):
-		if url.rfind("fanyi_")>0 or url.find("bookv_")>0:
-			rt=True
+		if url.rfind("fanyi_")>0 or url.rfind("bookv_")>0 or url.rfind("view_")>0:
+			if url.rfind("jiucuo")<0:
+				rt=True
 	return rt
 
 def addurls(url):

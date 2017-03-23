@@ -83,7 +83,7 @@ def getHref(hdoc):
 
 def urlfilter(url):
 	rt=True
-	if url.find("book")>0 or url.find("view_")>0 or url.find("fanyi_")>0:
+	if url.rfind("book")>0 or url.rfind("view_")>0 or url.rfind("fanyi")>0 or url.rfind("shangxi")>0:
 		rt=False
 	return rt
 
